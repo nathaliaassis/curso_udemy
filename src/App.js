@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Global from './styles/global';
+import Card from './Components/Card';
+import Lista from './activities/lists/Alunos';
+import TabelaProdutos from './activities/lists/Produtos';
+import Calculadora from './activities/calculadora';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+     <Global />
+      <Card titulo='calculadora' color='#fd746c'>
+        <Calculadora />
+      </Card>
+      <Card titulo='Table Map' color='#FDC830'>
+        <TabelaProdutos />
+      </Card>
+      <Card titulo='Map' color='#ff5e62'>
+        <Lista />
+      </Card>
     </div>
   );
 }
